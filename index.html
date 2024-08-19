@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="settingsBtn">Settings</button>
+    <div id="settings" class="hidden">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+
+
+        <p>Blur:</p>
+        <input id="blur" type="range" value="0" min="0" max="100" list="blurList"> <span id="blurValue">0</span>
+
+        <p>Angle:</p>
+        <input id="angle" type="range" min="0" max="360" list="angleList"> <span id="angleValue">180</span>
+
+        <p>Speed:</p>
+        <input id="speed" type="range" min="1" max="1000" list="speedList"> <span id="speedValue">500</span>
+
+        <p>Saturation:</p>
+        <input id="satur" type="range" value="100" min="0" max="100" list="saturList"> <span id="saturValue">100</span>
+
+        <p>Lightness:</p>
+        <input id="light" type="range" min="1" max="100" list="lightList"> <span id="lightValue">50</span>
+        
+        <p>Style:</p>
+        <select id="style" name="select">
+            <option value="linear" selected>linear</option>
+            <option value="radial">radial</option>
+            <option value="conic">conic</option>
+            <option value="repeating-linear">rep-linear</option>
+        </select>
+
+        <div id="colorPalette">
+            <p id="p0">
+                <button  number="0" class="deleteBtn">Delete</button>
+                <input number="0" type="color" id="picker0" name="head" value="#FFFFFF"/>
+                <a id="colorValue0">hsl(0,0%,100%)</a>
+            </p>
+            
+
+            <p id="p1">
+                <button  number="1" class="deleteBtn">Delete</button>
+                <input number="1" type="color" id="picker1" name="head" value="#000000" />
+                <span id="colorValue1"> hsl(0,0%,0%)</span>
+            </p>
+        </div>
+        
+
+        <button id="addBtn">Add</button>
+    </div>
+    
+  
+    <script src="index.js"></script>
+</body>
+</html>
